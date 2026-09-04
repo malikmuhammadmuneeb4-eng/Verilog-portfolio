@@ -1,0 +1,34 @@
+# Digital Design & Verification Portfolio
+
+Hi, I'm Muhammad Muneeb Malik — an Electrical Engineering graduate (Power) transitioning into
+Digital Design / Hardware Verification. This repo documents my learning journey, starting from
+digital logic fundamentals and building up toward SystemVerilog, UVM, and full verification
+environments.
+
+## Background
+- BSc Electrical Engineering (Power), UET Lahore, 2022
+- Currently self-studying: Digital Logic, Boolean Algebra, Verilog/SystemVerilog, UVM fundamentals
+- Goal: Junior Verification / Hardware Design Engineer role
+
+## Projects (in learning order)
+
+| # | Project | Concepts Covered | Status |
+|---|---------|-------------------|--------|
+| 1 | [2-to-1 MUX](./mux-2to1) | Combinational logic, `assign`, `always/case` | ✅ Done |
+| 2 | [2-to-4 Decoder](./decoder-2to4) | Concatenation, one-hot outputs | ✅ Done |
+| 3 | 4-to-2 Priority Encoder | `casez`, don't-cares, priority logic | 🔜 In progress |
+| 4 | Full Adder | XOR chains, gate-level design | 🔜 Planned |
+| 5 | 4-bit Ripple Carry Adder | Structural instantiation, module hierarchy | 🔜 Planned |
+| 6 | Simple ALU | Combining blocks, control logic | 🔜 Planned |
+| 7 | First UVM Testbench | Verification methodology | 🔜 Planned |
+
+## How each project is documented
+Every project folder contains:
+- `design.md` — the truth table and Boolean expression(s), derived by hand
+- `<name>.v` — the Verilog design file
+- `README.md` — a short explanation of the design and what it does
+
+## Why this repo exists
+I'm building this portfolio to demonstrate hands-on digital design ability while transitioning
+from a Power Engineering background. Feedback and suggestions are welcome — feel free to open
+an issue.
