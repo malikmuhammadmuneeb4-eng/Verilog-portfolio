@@ -16,8 +16,8 @@ environments.
 |---|---------|-------------------|--------|
 | 1 | [2-to-1 MUX](./mux-2to1) | Combinational logic, `assign`, `always/case` | ✅ Done |
 | 2 | [2-to-4 Decoder](./decoder-2to4) | Concatenation, one-hot outputs | ✅ Done |
-| 3 | 4-to-2 Priority Encoder | `casez`, don't-cares, priority logic | 🔜 In progress |
-| 4 | Full Adder | XOR chains, gate-level design | 🔜 Planned |
+| 3 | [4-to-2 Priority Encoder](./priority-encoder-4to2) | `casez`, don't-cares, priority logic | ✅ Done |
+| 4 | [Full Adder](./full-adder) | XOR chains, K-map analysis, gate-level design | ✅ Done |
 | 5 | 4-bit Ripple Carry Adder | Structural instantiation, module hierarchy | 🔜 Planned |
 | 6 | Simple ALU | Combining blocks, control logic | 🔜 Planned |
 | 7 | First UVM Testbench | Verification methodology | 🔜 Planned |
