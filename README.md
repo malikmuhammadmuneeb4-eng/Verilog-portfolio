@@ -18,9 +18,10 @@ environments.
 | 2 | [2-to-4 Decoder](./decoder-2to4) | Concatenation, one-hot outputs | ✅ Done |
 | 3 | [4-to-2 Priority Encoder](./priority-encoder-4to2) | `casez`, don't-cares, priority logic | ✅ Done |
 | 4 | [Full Adder](./full-adder) | XOR chains, K-map analysis, gate-level design | ✅ Done |
-| 5 | 4-bit Ripple Carry Adder | Structural instantiation, module hierarchy | 🔜 Planned |
-| 6 | Simple ALU | Combining blocks, control logic | 🔜 Planned |
-| 7 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 5 | [4-bit Ripple Carry Adder](./ripple-adder-4bit) | Structural instantiation, module hierarchy | ✅ Done |
+| 6 | Sequential Circuits (latches, flip-flops) | SR/D/JK flip-flops, registers | 🔜 In progress |
+| 7 | Simple ALU | Combining blocks, control logic | 🔜 Planned |
+| 8 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
