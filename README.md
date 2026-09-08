@@ -19,9 +19,11 @@ environments.
 | 3 | [4-to-2 Priority Encoder](./priority-encoder-4to2) | `casez`, don't-cares, priority logic | ✅ Done |
 | 4 | [Full Adder](./full-adder) | XOR chains, K-map analysis, gate-level design | ✅ Done |
 | 5 | [4-bit Ripple Carry Adder](./ripple-adder-4bit) | Structural instantiation, module hierarchy | ✅ Done |
-| 6 | Sequential Circuits (latches, flip-flops) | SR/D/JK flip-flops, registers | 🔜 In progress |
-| 7 | Simple ALU | Combining blocks, control logic | 🔜 Planned |
-| 8 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 6 | [4-bit Up Counter](./counter-4bit) | Registers, synchronous counters, overflow/wraparound | ✅ Done |
+| 7 | [4-bit Down Counter](./downcounter-4bit) | Underflow, 2's complement subtraction via adders | ✅ Done |
+| 8 | [Moore FSM - Traffic Light](./moore-fsm-trafficlight) | Moore vs Mealy, `parameter`, two-always-block FSM pattern | ✅ Done |
+| 9 | Simple ALU | Combining blocks, control logic | 🔜 Planned |
+| 10 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
