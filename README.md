@@ -32,7 +32,7 @@ environments.
 | 16 | [4-bit Comparator](./comparator-4bit) | Priority logic, structural vs behavioral, compiler-verified | ✅ Done |
 | 17 | [4-bit Equality Checker](./equality-checker-4bit) | Bitwise XNOR technique vs nested if/else | ✅ Done |
 | 18 | [1-bit ALU](./alu-1bit) | MUX-based design, discriminating test-case verification | ✅ Done |
-| 19 | [Overlapping "101" Detector (FSM)](./fsm-101-detector) | Mealy FSM, boolean equation derivation from truth table | 🔜 In progress |
+| 19 | [Overlapping "101" Detector (Mealy FSM)](./fsm-101-detector) | Mealy vs Moore, full boolean derivation from truth table, timing-bug verification | ✅ Done |
 | 20 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
@@ -41,8 +41,9 @@ Every project folder contains:
 - `<name>.v` — the Verilog design file
 - `README.md` — a short explanation of the design and what it does
 
-Several of the later projects (comparator-4bit, alu-1bit) were also compiled and exhaustively
-tested with Icarus Verilog self-checking testbenches, not just manually reviewed.
+Several projects (comparator-4bit, alu-1bit, fsm-101-detector) were also compiled and
+exhaustively/systematically tested with Icarus Verilog and Python reference models, not just
+manually reviewed — including catching and fixing a genuine Mealy-vs-Moore timing bug in the FSM.
 
 ## Why this repo exists
 I'm building this portfolio to demonstrate hands-on digital design ability while transitioning
