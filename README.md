@@ -9,6 +9,9 @@ environments.
 - BSc Electrical Engineering (Power), UET Lahore, 2022
 - Currently self-studying: Digital Logic, Boolean Algebra, Verilog/SystemVerilog, UVM fundamentals
 - Goal: Junior Verification / Hardware Design Engineer role
+- Local toolchain: Icarus Verilog + VS Code (installed and running locally, not just online tools)
+
+See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built up as I learn.
 
 ## Projects (in learning order)
 
@@ -33,7 +36,10 @@ environments.
 | 17 | [4-bit Equality Checker](./equality-checker-4bit) | Bitwise XNOR technique vs nested if/else | ✅ Done |
 | 18 | [1-bit ALU](./alu-1bit) | MUX-based design, discriminating test-case verification | ✅ Done |
 | 19 | [Overlapping "101" Detector (Mealy FSM)](./fsm-101-detector) | Mealy vs Moore, full boolean derivation from truth table, timing-bug verification | ✅ Done |
-| 20 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 20 | [Vending Machine FSM](./vending-machine-fsm) | Edge detection / debouncing, design-vs-testbench debugging | ✅ Done |
+| 21 | [Traffic Light + Pedestrian Button](./traffic-light-with-walk-button) | Mixed Moore/Mealy outputs on one FSM | ✅ Done |
+| 22 | [Full Adder Testbench (first testbenches)](./full-adder-testbench) | `initial`, `$display`, self-checking, exhaustive loop testing | ✅ Done |
+| 23 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
@@ -41,9 +47,9 @@ Every project folder contains:
 - `<name>.v` — the Verilog design file
 - `README.md` — a short explanation of the design and what it does
 
-Several projects (comparator-4bit, alu-1bit, fsm-101-detector) were also compiled and
-exhaustively/systematically tested with Icarus Verilog and Python reference models, not just
-manually reviewed — including catching and fixing a genuine Mealy-vs-Moore timing bug in the FSM.
+Several projects (comparator-4bit, alu-1bit, fsm-101-detector, vending-machine-fsm) were also
+compiled and exhaustively/systematically tested with Icarus Verilog, catching real bugs along
+the way — including an input-timing/debouncing bug and a Mealy-vs-Moore output timing bug.
 
 ## Why this repo exists
 I'm building this portfolio to demonstrate hands-on digital design ability while transitioning
