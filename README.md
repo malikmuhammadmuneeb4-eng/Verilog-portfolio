@@ -39,17 +39,20 @@ See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built u
 | 20 | [Vending Machine FSM](./vending-machine-fsm) | Edge detection / debouncing, design-vs-testbench debugging | ✅ Done |
 | 21 | [Traffic Light + Pedestrian Button](./traffic-light-with-walk-button) | Mixed Moore/Mealy outputs on one FSM | ✅ Done |
 | 22 | [Full Adder Testbench (first testbenches)](./full-adder-testbench) | `initial`, `$display`, self-checking, exhaustive loop testing | ✅ Done |
-| 23 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 23 | [SystemVerilog Basics](./systemverilog-basics) | `logic`, `always_comb`, `casez` wildcard rules (`?`/`z` vs `x`) | ✅ Done |
+| 24 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file, control unit | 🔜 Planned |
+| 25 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
 - `design.md` — the truth table and Boolean expression(s), derived by hand
-- `<name>.v` — the Verilog design file
+- `<name>.v` / `.sv` — the Verilog/SystemVerilog design file
 - `README.md` — a short explanation of the design and what it does
 
-Several projects (comparator-4bit, alu-1bit, fsm-101-detector, vending-machine-fsm) were also
-compiled and exhaustively/systematically tested with Icarus Verilog, catching real bugs along
-the way — including an input-timing/debouncing bug and a Mealy-vs-Moore output timing bug.
+Several projects (comparator-4bit, alu-1bit, fsm-101-detector, vending-machine-fsm,
+systemverilog-basics) were also compiled and exhaustively/systematically tested with Icarus
+Verilog, catching real bugs along the way — including an input-timing/debouncing bug, a
+Mealy-vs-Moore output timing bug, and a corrected misconception about `casez` wildcard syntax.
 
 ## Why this repo exists
 I'm building this portfolio to demonstrate hands-on digital design ability while transitioning
