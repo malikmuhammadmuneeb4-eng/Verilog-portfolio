@@ -40,8 +40,11 @@ See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built u
 | 21 | [Traffic Light + Pedestrian Button](./traffic-light-with-walk-button) | Mixed Moore/Mealy outputs on one FSM | ✅ Done |
 | 22 | [Full Adder Testbench (first testbenches)](./full-adder-testbench) | `initial`, `$display`, self-checking, exhaustive loop testing | ✅ Done |
 | 23 | [SystemVerilog Basics](./systemverilog-basics) | `logic`, `always_comb`, `casez` wildcard rules (`?`/`z` vs `x`) | ✅ Done |
-| 24 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file, control unit | 🔜 Planned |
-| 25 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 24 | [SystemVerilog Sequential (enable, typedef enum)](./systemverilog-sequential) | `always_ff` with enable, `typedef enum`, delta-cycle & race-condition debugging | ✅ Done |
+| 25 | [XYZ Sequence Lock FSM](./xyz-sequence-lock-fsm) | Table-first FSM design process, inline vs function-based implementation | ✅ Done |
+| 26 | [SystemVerilog Functions](./systemverilog-functions) | `function` syntax, reusable combinational logic | ✅ Done |
+| 27 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file, control unit | 🔜 Planned |
+| 28 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
@@ -49,10 +52,11 @@ Every project folder contains:
 - `<name>.v` / `.sv` — the Verilog/SystemVerilog design file
 - `README.md` — a short explanation of the design and what it does
 
-Several projects (comparator-4bit, alu-1bit, fsm-101-detector, vending-machine-fsm,
-systemverilog-basics) were also compiled and exhaustively/systematically tested with Icarus
-Verilog, catching real bugs along the way — including an input-timing/debouncing bug, a
-Mealy-vs-Moore output timing bug, and a corrected misconception about `casez` wildcard syntax.
+Several projects were also compiled and exhaustively/systematically tested with Icarus Verilog,
+catching real bugs along the way — including an input-timing/debouncing bug, a Mealy-vs-Moore
+output timing bug, a corrected misconception about `casez` wildcard syntax, and — in the most
+recent vending-machine rebuild — a deep dive into delta-cycle simulation timing and clock-edge
+race conditions in testbenches, repeatedly tracing "is this a design bug or a testbench bug?"
 
 ## Why this repo exists
 I'm building this portfolio to demonstrate hands-on digital design ability while transitioning
