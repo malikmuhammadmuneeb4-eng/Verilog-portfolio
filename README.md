@@ -43,8 +43,11 @@ See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built u
 | 24 | [SystemVerilog Sequential (enable, typedef enum)](./systemverilog-sequential) | `always_ff` with enable, `typedef enum`, delta-cycle & race-condition debugging | ✅ Done |
 | 25 | [XYZ Sequence Lock FSM](./xyz-sequence-lock-fsm) | Table-first FSM design process, inline vs function-based implementation | ✅ Done |
 | 26 | [SystemVerilog Functions](./systemverilog-functions) | `function` syntax, reusable combinational logic | ✅ Done |
-| 27 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file, control unit | 🔜 Planned |
-| 28 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 27 | [Parameterized Counter (Sync & Async Reset)](./parameterized-counter) | `#(parameter N)`, natural vs explicit wraparound, sync vs async reset | ✅ Done |
+| 28 | Arrays / Memories | `logic [N-1:0] mem [0:M-1]`, register file basics | 🔜 Planned |
+| 29 | Timing Analysis | Setup/hold, clock skew, critical path, STA concepts, metastability | 🔜 Planned |
+| 30 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file, control unit | 🔜 Planned |
+| 31 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
@@ -54,9 +57,9 @@ Every project folder contains:
 
 Several projects were also compiled and exhaustively/systematically tested with Icarus Verilog,
 catching real bugs along the way — including an input-timing/debouncing bug, a Mealy-vs-Moore
-output timing bug, a corrected misconception about `casez` wildcard syntax, and — in the most
-recent vending-machine rebuild — a deep dive into delta-cycle simulation timing and clock-edge
-race conditions in testbenches, repeatedly tracing "is this a design bug or a testbench bug?"
+output timing bug, a corrected misconception about `casez` wildcard syntax, a deep dive into
+delta-cycle simulation timing and clock-edge race conditions, and — most recently — verifying the
+real, observable difference between synchronous and asynchronous reset via simulation.
 
 ## Why this repo exists
 I'm building this portfolio to demonstrate hands-on digital design ability while transitioning
