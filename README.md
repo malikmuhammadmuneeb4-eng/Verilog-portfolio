@@ -45,7 +45,7 @@ See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built u
 | 26 | [SystemVerilog Functions](./systemverilog-functions) | `function` syntax, reusable combinational logic | ✅ Done |
 | 27 | [Parameterized Counter (Sync & Async Reset)](./parameterized-counter) | `#(parameter N)`, natural vs explicit wraparound, sync vs async reset | ✅ Done |
 | 28 | [Memory & Register File](./memory-and-register-file) | SystemVerilog arrays, address width, CPU-style dual-read register file | ✅ Done |
-| 29 | Timing Analysis | Setup/hold, clock skew, critical path, STA concepts, metastability | 🔜 Planned |
+| 29 | [Priority Encoder Testbench](./priority-encoder-testbench) | Instantiation fundamentals, exhaustive self-checking testbench template, compiled/run independently without AI | ✅ Done |
 | 30 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
 | 31 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
@@ -59,7 +59,9 @@ Several projects were also compiled and exhaustively/systematically tested with 
 catching real bugs along the way — including an input-timing/debouncing bug, a Mealy-vs-Moore
 output timing bug, a corrected misconception about `casez` wildcard syntax, a deep dive into
 delta-cycle simulation timing and clock-edge race conditions, verifying sync vs async reset
-behavior, and building up from basic memory arrays to a CPU-style dual-read register file.
+behavior, building a CPU-style register file, and — most recently — rebuilding testbench
+fundamentals from instantiation up and running everything independently, without AI assistance,
+in preparation for technical interviews.
 
 ## Why this repo exists
 I'm building this portfolio to demonstrate hands-on digital design ability while transitioning
