@@ -46,8 +46,9 @@ See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built u
 | 27 | [Parameterized Counter (Sync & Async Reset)](./parameterized-counter) | `#(parameter N)`, natural vs explicit wraparound, sync vs async reset | ✅ Done |
 | 28 | [Memory & Register File](./memory-and-register-file) | SystemVerilog arrays, address width, CPU-style dual-read register file | ✅ Done |
 | 29 | [Priority Encoder Testbench](./priority-encoder-testbench) | Instantiation fundamentals, exhaustive self-checking testbench template, compiled/run independently without AI | ✅ Done |
-| 30 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
-| 31 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 30 | [Comparator Testbench](./comparator-testbench) | Reused testbench template at scale (256 cases), loop-bound reasoning (`i<2^n`) | ✅ Done |
+| 31 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
+| 32 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
