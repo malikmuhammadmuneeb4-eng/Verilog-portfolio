@@ -9,7 +9,7 @@ environments.
 - BSc Electrical Engineering (Power), UET Lahore, 2022
 - Currently self-studying: Digital Logic, Boolean Algebra, Verilog/SystemVerilog, UVM fundamentals
 - Goal: Junior Verification / Hardware Design Engineer role
-- Local toolchain: Icarus Verilog + VS Code (installed and running locally, not just online tools)
+- Local toolchain: Icarus Verilog + VS Code, plus EDA Playground + EPWave for waveform viewing
 
 See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built up as I learn.
 
@@ -47,8 +47,9 @@ See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built u
 | 28 | [Memory & Register File](./memory-and-register-file) | SystemVerilog arrays, address width, CPU-style dual-read register file | ✅ Done |
 | 29 | [Priority Encoder Testbench](./priority-encoder-testbench) | Instantiation fundamentals, exhaustive self-checking testbench template, compiled/run independently without AI | ✅ Done |
 | 30 | [Comparator Testbench](./comparator-testbench) | Reused testbench template at scale (256 cases), loop-bound reasoning (`i<2^n`) | ✅ Done |
-| 31 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
-| 32 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 31 | [Testbench Practice Ladder](./testbench-practice-ladder) | 5-step difficulty ramp (XOR → Majority → D-FF → Toggle FSM → multi-input Process FSM), clock-edge timing deep dive, real waveform tooling (EDA Playground/EPWave) | ✅ Done |
+| 32 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
+| 33 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
@@ -60,9 +61,10 @@ Several projects were also compiled and exhaustively/systematically tested with 
 catching real bugs along the way — including an input-timing/debouncing bug, a Mealy-vs-Moore
 output timing bug, a corrected misconception about `casez` wildcard syntax, a deep dive into
 delta-cycle simulation timing and clock-edge race conditions, verifying sync vs async reset
-behavior, building a CPU-style register file, and — most recently — rebuilding testbench
-fundamentals from instantiation up and running everything independently, without AI assistance,
-in preparation for technical interviews.
+behavior, building a CPU-style register file, rebuilding testbench fundamentals from
+instantiation up, and — most recently — a structured, difficulty-ramped testbench practice
+ladder covering a precise, independently-verified rule for when clock-based delays are and
+aren't needed, plus real waveform tooling.
 
 ## Why this repo exists
 I'm building this portfolio to demonstrate hands-on digital design ability while transitioning
