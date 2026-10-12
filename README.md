@@ -48,8 +48,9 @@ See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built u
 | 29 | [Priority Encoder Testbench](./priority-encoder-testbench) | Instantiation fundamentals, exhaustive self-checking testbench template, compiled/run independently without AI | ✅ Done |
 | 30 | [Comparator Testbench](./comparator-testbench) | Reused testbench template at scale (256 cases), loop-bound reasoning (`i<2^n`) | ✅ Done |
 | 31 | [Testbench Practice Ladder](./testbench-practice-ladder) | 5-step difficulty ramp (XOR → Majority → D-FF → Toggle FSM → multi-input Process FSM), clock-edge timing deep dive, real waveform tooling (EDA Playground/EPWave) | ✅ Done |
-| 32 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
-| 33 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 32 | [Synchronous FIFO](./fifo) | Pointer-based FIFO design, full/empty counter logic, overflow/underflow protection, manual-to-task testbench refactor | ✅ Done |
+| 33 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
+| 34 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
@@ -62,9 +63,10 @@ catching real bugs along the way — including an input-timing/debouncing bug, a
 output timing bug, a corrected misconception about `casez` wildcard syntax, a deep dive into
 delta-cycle simulation timing and clock-edge race conditions, verifying sync vs async reset
 behavior, building a CPU-style register file, rebuilding testbench fundamentals from
-instantiation up, and — most recently — a structured, difficulty-ramped testbench practice
-ladder covering a precise, independently-verified rule for when clock-based delays are and
-aren't needed, plus real waveform tooling.
+instantiation up, a structured, difficulty-ramped testbench practice ladder covering a precise,
+independently-verified rule for when clock-based delays are and aren't needed, plus real
+waveform tooling, and — most recently — a synchronous FIFO built from a pointer/counter design
+through to a manual self-checking testbench and a task-based refactor of it.
 
 ## Why this repo exists
 I'm building this portfolio to demonstrate hands-on digital design ability while transitioning
