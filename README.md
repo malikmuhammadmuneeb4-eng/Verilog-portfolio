@@ -24,7 +24,7 @@ See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built u
 | 5 | [4-bit Ripple Carry Adder](./ripple-adder-4bit) | Structural instantiation, module hierarchy | ✅ Done |
 | 6 | [4-bit Up Counter](./counter-4bit) | Registers, synchronous counters, overflow/wraparound | ✅ Done |
 | 7 | [4-bit Down Counter](./downcounter-4bit) | Underflow, 2's complement subtraction via adders | ✅ Done |
-| 8 | [Moore FSM - Traffic Light](./moore-fsm-trafficlight) | Moore vs Mealy, `parameter`, two-always-block FSM pattern | ✅ Done |
+| 8 | [Moore FSM - Traffic Light](./moore-fsm-trafficlight) | Moore vs Mealy, `parameter`, two-always-block FSM pattern; revisited with a real per-state timed hold | ✅ Done |
 | 9 | [Exactly-2-of-3 Detector](./exactly-two-detector) | Independent design practice, K-map judgment calls | ✅ Done |
 | 10 | [1-bit Comparator](./comparator-1bit) | Independent design, built & verified in Logisim | ✅ Done |
 | 11 | [4-to-1 MUX drill](./mux-4to1-drill) | Coding fluency drill | ✅ Done |
@@ -48,9 +48,10 @@ See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built u
 | 29 | [Priority Encoder Testbench](./priority-encoder-testbench) | Instantiation fundamentals, exhaustive self-checking testbench template, compiled/run independently without AI | ✅ Done |
 | 30 | [Comparator Testbench](./comparator-testbench) | Reused testbench template at scale (256 cases), loop-bound reasoning (`i<2^n`) | ✅ Done |
 | 31 | [Testbench Practice Ladder](./testbench-practice-ladder) | 5-step difficulty ramp (XOR → Majority → D-FF → Toggle FSM → multi-input Process FSM), clock-edge timing deep dive, real waveform tooling (EDA Playground/EPWave) | ✅ Done |
-| 32 | [Synchronous FIFO](./fifo) | Pointer-based FIFO design, full/empty counter logic, overflow/underflow protection, manual-to-task testbench refactor | ✅ Done |
-| 33 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
-| 34 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 32 | [Synchronous FIFO](./fifo) | Pointer-based FIFO design, full/empty counter logic, overflow/underflow protection, simultaneous read+write handling, pointer wraparound | ✅ Done |
+| 33 | [Overlapping "1011" Detector (Moore FSM)](./fsm-1011-detector-moore) | Moore vs Mealy contrast exercise (companion to #19's Mealy detector), overlap-handling in the transition table | ✅ Done |
+| 34 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
+| 35 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
@@ -65,8 +66,10 @@ delta-cycle simulation timing and clock-edge race conditions, verifying sync vs 
 behavior, building a CPU-style register file, rebuilding testbench fundamentals from
 instantiation up, a structured, difficulty-ramped testbench practice ladder covering a precise,
 independently-verified rule for when clock-based delays are and aren't needed, plus real
-waveform tooling, and — most recently — a synchronous FIFO built from a pointer/counter design
-through to a manual self-checking testbench and a task-based refactor of it.
+waveform tooling, and — most recently — a cold-recall revision pass that rebuilt the synchronous
+FIFO in SystemVerilog (simultaneous read+write, pointer wraparound), added a timed hold to the
+traffic-light Moore FSM, and built a second sequence-detector FSM in the opposite style (Moore,
+for contrast with the earlier Mealy one) — all from scratch, without reference code.
 
 ## Why this repo exists
 I'm building this portfolio to demonstrate hands-on digital design ability while transitioning

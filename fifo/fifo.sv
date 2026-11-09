@@ -1,20 +1,28 @@
-module FIFO(
-    input logic clk, rst ,wr_en ,rd_en,
-    input logic [7:0]din,
-    output logic [7:0]dout,
-    output logic full, empty
+module fifo(
+  input logic clk, reset,
+  input logic write_en, read_en,
+  input logic [31:0] data_in,
+  output logic [31:0] data_out,
+  output logic full , empty 
 );
-logic [7:0] mem [3:0];
-logic [1:0]write_ptr ,read_ptr;
-logic [3:0] count;
-always_ff @(posedge clk) begin
-if (rst) begin write_ptr<= 2'b00; read_ptr <= 2'b00; count<=3'b000; dout<=8'd0; end
-else if (wr_en==1 && !full) begin mem[write_ptr]<= din; write_ptr<=write_ptr+1; count<=count+1; end
-else if (rd_en==1 && !empty) begin dout<=mem[read_ptr]; read_ptr<=read_ptr+1 ;count<=count-1; end
-end
-always_comb begin
-if (count==3'b000) empty=1'b1;
-else if (count==3'b100) full=1'b1;
-else begin empty=1'b0; full=1'b0; end
-end
+  reg [3:0] counter;
+  logic [31:0] mem [3:0];
+  reg [1:0] read_ptr,write_ptr;
+  always_ff @(posedge clk) begin
+    if (reset) begin mem <= '0; read_ptr<=2'd0; write_ptr<=2'd0; counter<=4'b0; data_out<=32'b0; end
+    else if (read_en && empty==0 && write_en && full==0) begin
+      mem[write_ptr]<=data_in;
+      data_out <= mem[read_ptr];
+      read_ptr<=read_ptr+1;
+      write_ptr<=write_ptr+1;
+      counter<=counter;
+    end
+    else if(write_en && full==0) begin mem[write_ptr]<=data_in; write_ptr<=write_ptr+1; counter<=counter+1; end
+    else if (read_en && empty==0) begin data_out <= mem[read_ptr]; read_ptr<=read_ptr+1; counter<=counter-1; end
+  end
+  always_comb begin
+    if (counter==4'd4) begin  full=1; empty=0; end
+    else if (counter==4'd0)begin  full=0; empty=1; end
+    else  begin full=0; empty=0; end
+  end
 endmodule
