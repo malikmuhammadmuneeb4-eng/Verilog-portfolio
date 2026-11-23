@@ -50,8 +50,9 @@ See [NOTES.md](./NOTES.md) for a personal Verilog syntax quick-reference built u
 | 31 | [Testbench Practice Ladder](./testbench-practice-ladder) | 5-step difficulty ramp (XOR → Majority → D-FF → Toggle FSM → multi-input Process FSM), clock-edge timing deep dive, real waveform tooling (EDA Playground/EPWave) | ✅ Done |
 | 32 | [Synchronous FIFO](./fifo) | Pointer-based FIFO design, full/empty counter logic, overflow/underflow protection, simultaneous read+write handling, pointer wraparound | ✅ Done |
 | 33 | [Overlapping "1011" Detector (Moore FSM)](./fsm-1011-detector-moore) | Moore vs Mealy contrast exercise (companion to #19's Mealy detector), overlap-handling in the transition table | ✅ Done |
-| 34 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
-| 35 | First UVM Testbench | Verification methodology | 🔜 Planned |
+| 34 | [Register File — Constrained-Random Verification](./reg-file-verification) | `rand`/`randc`/`dist`/`solve...before`/`soft` constraints, reference-model + scoreboard architecture, functional coverage (`covergroup`/`coverpoint`/`cross`) | ✅ Done |
+| 35 | Computer Architecture / Simple RISC-V processor | Fetch-decode-execute, register file + ALU integration, control unit | 🔜 Planned |
+| 36 | First UVM Testbench | Verification methodology | 🔜 Planned |
 
 ## How each project is documented
 Every project folder contains:
